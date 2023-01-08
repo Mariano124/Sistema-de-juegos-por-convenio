@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+<meta charset="utf-8">
+<head>
+    <title>JUEGOS POR CONVENIO</title>
+</head>
+
+<style type="text/css">
+    @media print {
+        #pantalla {
+            display: none;
+        }
+        #modo {
+            display: none;
+        }
+        #modos {
+            display: none;
+        }
+        #mariano {
+            display: none;
+        }
+        body {
+            font-size: 20px;
+            margin: 20mm;
+        }
+    }
+</style>
+<link rel="shortcut icon" href="./img/favicon.png">
+<body style="background: #96FF6F">
+    <h1 id="pantalla">PREMIO QUNINI 6 SISTEMA JXC</h1>
+    <p id="pantalla">
+        CREADO POR MARIANO, M.
+    </p>
+    <div id="pantalla">PONER FECHA DEL DÍA DE HOY: <button onclick="fecha()">FECHA DEL DÍA</button><button onclick="cuil()">CONSTANACIA C.U.I.L</button><br>FECHA DEL DÍA: <input type="text" id="dia" maxlength="2"> més <input type="text" list="itemsv" id="mes"/> Año: 2.0<input type="text" id="fin" maxlength="2"><datalist id="itemsv">
+        <option>Enero</option>
+        <option>Febrero</option>
+        <option>Marzo</option>
+        <option>Abril</option>
+        <option>Mayo</option>
+        <option>Junio</option>
+        <option>Julio</option>
+        <option>Agosto</option>
+        <option>Septiembre</option>
+        <option>Octubre</option>
+        <option>Noviembre</option>
+        <option>Diciembre</option>
+    </datalist></div>
+    <p id="pantalla">
+        <b id="error" style="color: red"></b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b id="erroraño" style="color: red"></b><br>
+        1º y 2º premio: <select id="primersegundo">
+            <option value="NO">NO</option>
+            <option value="SI">SI</option>
+        </select>
+    </p>
+    
+      <p id="modos">  
+        MODALIDAD: <input type="text" list="tipo" id="modalidad"/><datalist id="tipo"> 
+            <option></option>
+            <option value="TRADICIONAL PRIMER SORTEO">TRADICIONAL PRIMER SORTEO</option>
+            <option>TRADICIONAL LA SEGUNDA DEL QUINI</option>
+            <option>REVANCHA</option>
+            <option>SIEMPRE SALE</option>
+            <option>PREMIO EXTRA</option>
+        </datalist><select id="seccion">
+            <option></option>
+            <option value=" 1° PREMIO">1° Premio</option>
+            <option value=" 2° PREMIO">2° Premio</option>
+            <option value=" 3° PREMIO">3° Premio</option>
+        </select> por <input type="" id="primerpre" disabled="">
+
+                 <p id="modo">
+            PREMIO 2: <input type="text" list="primerp" id="mosdalidad" disabled/><datalist id="primerp" disabled>  
+            <option></option>
+            <option></option>
+            <option>más “TRADICIONAL PRIMER SORTEO</option>
+            <option>más “TRADICIONAL LA SEGUNDA DEL QUINI</option>
+            <option>más “REVANCHA</option>
+            <option>más “SIEMPRE SALE</option>
+            <option>más “PREMIO EXTRA</option>
+        </datalist><select id="seccions" disabled>
+            <option></option>
+            <option value=" 1° PREMIO">1° Premio</option>
+            <option value=" 2° PREMIO">2° Premio</option>
+            <option value=" 3° PREMIO">3° Premio</option>
+        </select> por <input type="text" id="mon" disabled> 
+        <br>
+           
+         <p id="mariano">TOTAL DEL PREMIO EN PESOS: <input type="number" id='field-number' placeholder="$"> con <input type="text" id="centavos" placeholder="$" maxlength="2" style="width: 15px">
+    </p>
+       
+        <form class="form" action="#" onsubmit="event.preventDefault();">
+            
+
+        </form>
+        
+
+    </div>
+    <div id="loco">
+        
+    </div>
+    
+    <p id="pantalla">
+            SORTEO Nº: <input type="number" id="Sorteo">
+        </p>
+        <p id="pantalla">
+            FECHA: <input type="date" id="fechasorteo">
+        </p>
+        <p id="pantalla">
+            AGENCIA: <input type="number" id="Agencia">
+        </p>
+        <p id="pantalla">
+            APELLIDO Y NOMBRE: <input type="text" id="nombre">
+        </p>
+        <p id="pantalla">
+            C.U.I.L: <input type="text" id="Primerc" style="width: 15px" maxlength="2">-<input type="text" id="DOCUMENTO" maxlength="8" style="width: 60px">-<input type="text" id="Segund" maxlength="1" style="width: 10px">
+        </p>
+        <p id="pantalla">
+            DOMICILIO: <input type="text" id="DOMI">
+        </p>
+        <p id="pantalla">
+            LOCALIDAD: <input type="text" list="items" id="rioja" />
+  <!-- Lista de opciones -->
+  <datalist id="items">
+    <option value="Arauco">Arauco</option>
+    <option value="Capital">Capital</option>
+    <option value="Castro Barros">Castro Barros</option>
+    <option value="Chamical">Chamical</option>
+    <option value="Chilecito">Chilecito</option>
+    <option value="Coronel Felipe Varela">Coronel Felipe Varela</option>
+    <option value="Famatina">Famatina</option>
+    <option value="General Ángel Vicente Peñaloza">General Ángel Vicente Peñaloza</option>
+    <option value="General Belgrano">General Belgrano</option>
+    <option value="General Juan Facundo Quiroga">General Juan Facundo Quiroga</option>
+    <option value="General Lamadrid">General Lamadrid</option>
+    <option value="General Ocampo">General Ocampo</option>
+    <option value="General San Martín">General San Martín</option>
+    <option value="Independencia">Independencia</option>
+    <option value="Rosario Vera Peñaloza">Rosario Vera Peñaloza</option>
+    <option value="San Blas de los Sauces">San Blas de los Sauces</option>
+    <option value="Sanagasta">Sanagasta</option>
+    <option value="Vinchina">Vinchina</option>
+  
+  </datalist>
+
+        </p>
+        <P id="pantalla">
+            PROVINCIA: <input type="text" value="LA RIOJA" id="provin">
+        </P>
+        <p id="pantalla">
+            CUPON: <input type="text" id="cupon" maxlength="15">
+        </p>
+        <p id="pantalla">
+            Nº DE APUESTA: <input type="text" name="" id="apuesta">
+        </p>
+        <p id="pantalla">
+            TELEFONO: <input type="text" list="TELEFONO" id="celul" required=""><datalist id="TELEFONO">
+                <option></option>
+                <option>LLAMAR AL AGENCIERO</option>
+            </datalist>
+        </p>
+        <p id="pantalla">
+            PRESENTACIÓN: <select id="presentado">
+                <option>PRESENCIAL</option>
+                <option>INTERIOR</option>
+            </select>
+        </p>
+</body>
+
+<p id="pantalla">
+    <button onclick="javascript:window.print()">IMPRIMIR</button><button onclick="location.reload()">BORRAR TODO</button>
+</p>
+<script type="text/javascript">
+    function cuil(){
+        window.open("./dist/index.html", "Diseño Web", "width=900, height=900");
+    }
+    function fecha () {
+        var fechas = new Date();
+        var res = document.getElementById("dia").value = fechas.getDate();
+        var res = document.getElementById("dia").disabled = "true";
+        var res = document.getElementById("o").innerHTML = fechas.getDate();
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var res = document.getElementById("mes").value = (meses[fechas.getMonth()]);
+        var res = document.getElementById("mes").disabled = "true";
+        var res = document.getElementById("h").innerHTML = (meses[fechas.getMonth()]);
+        var res = document.getElementById("fin").value = (fechas.getFullYear()-2000);
+        var res = document.getElementById("fin").disabled = "true";
+         var res = document.getElementById("aco").innerHTML = (fechas.getFullYear()-2000);
+
+    }
+</script>
+<script type="text/javascript">
+ 
+    var sDOCUMENTO = document.getElementById("DOCUMENTO");
+    sDOCUMENTO.addEventListener("keyup", () => {
+        var sdoc = sDOCUMENTO.value;
+        if (sdoc.length == 7) {
+            var sdoc = new String(sdoc);
+            var gh = (sdoc[0] + "." + sdoc[1] + sdoc[2] + sdoc[3] + "." + sdoc[4] + sdoc[5] + sdoc[6]);
+            var rt = document.getElementById("sDOCUMENTO").innerHTML = gh;
+            console.log(gh);
+
+        }
+        if (sdoc.length == 8) {
+            var sdoc = new String(sdoc);
+            var gh = (sdoc[0] + sdoc[1] + "." + sdoc[2] + sdoc[3] + sdoc[4] + ". "+ sdoc[5] + sdoc[6] + sdoc[7]);
+            var rt = document.getElementById("sDOCUMENTO").innerHTML = gh;
+            console.log(gh);
+        }
+        if (sdoc.length == 0) {
+            var rt = document.getElementById("sDOCUMENTO").innerHTML = "";
+        }
+        var ui = document.getElementById("puntos").innerHTML = sDOCUMENTO.value;
+    });
+    var cupon = document.getElementById("cupon");
+    cupon.addEventListener("keyup", () => {
+        var asss = document.getElementById("cupones").innerHTML = cupon.value;
+        var cuponnumero = cupon.value;
+        if (cuponnumero.length == "5"){
+            var asss = document.getElementById("cupon").value = (cuponnumero + "-70-");
+        }
+        if (cuponnumero.length == "15") {
+            var estil = document.getElementById("cupon").style.color = 'green';
+        }
+        else {
+            var estil = document.getElementById("cupon").style.color = 'red';   
+        }
+        });
+        var cantida = document.getElementById("primersegundo");
+    cantida.addEventListener("click", () => {
+        if (cantida.value == "SI"){
+        var sies = document.getElementById("mosdalidad").disabled = "";
+        var sies = document.getElementById("mon").disabled = "";
+        var sies = document.getElementById("seccions").disabled = "";
+        var sies = document.getElementById("primerpre").disabled = "";
+
+    }   
+        if (cantida.value == "NO") {
+            var sies = document.getElementById("mon").disabled = "true";
+            var sies = document.getElementById("mosdalidad").disabled = "true";
+            var sies = document.getElementById("seccions").disabled = "true";
+            var sies = document.getElementById("primerpre").disabled = "true";
+        }
+
+    });
+    var cantida = document.getElementById("primersegundo");
+    cantida.addEventListener("change", () => {
+        if (cantida.value == "SI"){
+        var sies = document.getElementById("mosdalidad").disabled = "";
+        var sies = document.getElementById("mon").disabled = "";
+        var sies = document.getElementById("seccions").disabled = "";
+        var sies = document.getElementById("primerpre").disabled = "";
+
+    }   
+        if (cantida.value == "NO") {
+            var sies = document.getElementById("mon").disabled = "true";
+            var sies = document.getElementById("mosdalidad").disabled = "true";
+            var sies = document.getElementById("seccions").disabled = "true";
+            var sies = document.getElementById("primerpre").disabled = "true";
+        }
+
+    });
+    cantida.addEventListener("keyup", () => {
+        if (cantida.value == "SI"){
+        var sies = document.getElementById("mosdalidad").disabled = "";
+        var sies = document.getElementById("mon").disabled = "";
+        var sies = document.getElementById("seccions").disabled = "";
+        var sies = document.getElementById("primerpre").disabled = "";
+
+    }   
+        if (cantida.value == "NO") {
+            var sies = document.getElementById("mon").disabled = "true";
+            var sies = document.getElementById("mosdalidad").disabled = "true";
+            var sies = document.getElementById("seccions").disabled = "true";
+            var sies = document.getElementById("primerpre").disabled = "true";
+        }
+
+    });
+    var cession = document.getElementById("seccion");
+    cession.addEventListener("keyup", () => {
+        var cession1 = document.getElementById("sec").innerHTML = cession.value;
+    });
+    cession.addEventListener("click", () => {
+        var cession1 = document.getElementById("sec").innerHTML = cession.value;
+    });
+    var celular = document.getElementById("celul");
+    celular.addEventListener("keyup", () => {
+        var hola = celular.value;
+        if (hola.length == 4) {
+            if (hola > 1000) {
+                    var cv = document.getElementById("celul").value = (hola + "-");
+
+            }
+        }
+        var assss = document.getElementById("cel").innerHTML = celular.value;
+        
+    });
+    var presen = document.getElementById("presentado");
+    presen.addEventListener("keyup", () => {
+        var assss = document.getElementById("persona").innerHTML = presen.value;
+    });
+    var presen = document.getElementById("presentado");
+    presen.addEventListener("click", () => {
+        var assss = document.getElementById("persona").innerHTML = presen.value;
+    });
+    var presen = document.getElementById("presentado");
+    presen.addEventListener("chage", () => {
+        var assss = document.getElementById("persona").innerHTML = presen.value;
+    });
+    var lu = document.getElementById("rioja");
+    lu.addEventListener("keyup", () => {
+        var asss = document.getElementById("lugri").innerHTML = lu.value.toUpperCase();
+    });
+    var hola = document.getElementById("mes");
+    hola.addEventListener("keyup", () => {
+        var s = document.getElementById("h").innerHTML = hola.value;
+    });
+    var domi = document.getElementById("DOMI");
+    domi.addEventListener("keyup", () => {
+        var sdomi = document.getElementById("lugar").innerHTML = domi.value;
+    });
+    var domi = document.getElementById("DOMI");
+    domi.addEventListener("keyup", () => {
+        var sdomi = document.getElementById("lugar").innerHTML = domi.value;
+    });
+    var incia = document.getElementById("provin");
+    incia.addEventListener("keyup", () => {
+        var cia = document.getElementById("locaprov").innerHTML = incia.value;
+    });
+    var puesta = document.getElementById("apuesta");
+    puesta.addEventListener("keyup", () => {
+        var asdfe = document.getElementById("puestap").innerHTML = puesta.value;
+    });
+    var Segund = document.getElementById("Segund");
+    Segund.addEventListener("keyup", () => {
+        var segundas = document.getElementById("segunda").innerHTML = Segund.value;
+    });
+    var primerc = document.getElementById("Primerc");
+    primerc.addEventListener("keyup", () => {
+        var cs = document.getElementById("numenuno").innerHTML = primerc.value;
+    });
+    var nombre = document.getElementById("nombre");
+    nombre.addEventListener("keyup", () => {
+        var snombre = document.getElementById("nombreape").innerHTML = nombre.value.toUpperCase();
+    });
+    var holas = document.getElementById("dia");
+    holas.addEventListener("keyup", () => {
+        var m = holas.value;
+        if (m == "1") {
+            var m = m.replace("1", "01");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "2") {
+            var m = m.replace("2", "02");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "3") {
+            var m = m.replace("3", "03");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "4") {
+            var m = m.replace("4", "04");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "5") {
+            var m = m.replace("5", "05");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "6") {
+            var m = m.replace("6", "06");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "7") {
+            var m = m.replace("7", "07");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "8") {
+            var m = m.replace("8", "08");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        if (m == "9") {
+            var m = m.replace("9", "09");
+            var s = document.getElementById("o").innerHTML = m;
+        }
+        else {
+            var s = document.getElementById("o").innerHTML = m;   
+        }
+        var fechadia = new Date();
+        var lc = holas.value;
+        if (lc.length == 2){
+            if (fechadia.getDate() != lc) {
+                alert("EL DIA DE HOY ES " + fechadia.getDate());
+                var m = document.getElementById("error").innerHTML = "EL DIA DE HOY ES " + fechadia.getDate(); 
+            }
+            else {
+                var m = document.getElementById("error").innerHTML = "";   
+            }
+        }
+    });
+    var holasa = document.getElementById("fin");
+    holasa.addEventListener("keyup", () => {
+        var df = (20 + holasa.value);
+        var fd = new Date();
+        if (df.length == 4){
+        if (fd.getFullYear() != df) {
+            alert("RECUERDA QUE EL AÑO ES: " + fd.getFullYear());
+            var corregir = document.getElementById("erroraño").innerHTML = "RECUERDA QUE EL AÑO ES: " + fd.getFullYear();
+        }
+        else {
+            var corregir = document.getElementById("erroraño").innerHTML = "";
+        }
+        }
+        var sa = document.getElementById("aco").innerHTML = holasa.value;
+    });
+    var modalidad = document.getElementById("modalidad");
+    modalidad.addEventListener("keyup", () => {
+        var moda = document.getElementById("tipop").innerHTML = modalidad.value;
+    });
+    var modalidad = document.getElementById("modalidad");
+    modalidad.addEventListener("click", () => {
+        var moda = document.getElementById("tipop").innerHTML = modalidad.value;
+    });
+    var limite = document.getElementById("dia");
+    limite.addEventListener("keyup", () => {
+        if (limite.value > 31) {
+            alert("PUSISTE MÁS DE 31 DÍAS");
+            var l = document.getElementById("dia").value = "";
+            var l = document.getElementById("o").innerHTML = "";  
+        }
+        if (limite.value == "00") {
+            alert("PUSISTE UN VALOR NUMERICO IGUAL A 0 TIENE QUE SER MAYOR O IGUAL A 1");
+            var l = document.getElementById("dia").value = "";
+            var l = document.getElementById("o").innerHTML = "";   
+        }
+        
+    });
+    var Sorteo = document.getElementById("Sorteo");
+    Sorteo.addEventListener("keyup", () => {
+        var Sorteos = document.getElementById("Sorteoss").innerHTML = Sorteo.value;
+    });
+    var pesoso = document.getElementById("field-number");
+    pesoso.addEventListener("keyup", () => {
+        const formatterEuro = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP'
+     })
+    
+     var pesos = document.getElementById("pesos").innerHTML = formatterEuro.format(pesoso.value).replace(",00", "");
+     var l = formatterEuro.format(pesoso.value).replace(",00", "");
+    
+    });
+
+
+    var cent = document.getElementById("centavos");
+    cent.addEventListener("keyup", () => {
+        var centavos = document.getElementById("cen").innerHTML = cent.value;
+        var centavos2 = document.getElementById("pega").innerHTML = cent.value;
+    });
+    var fsorteo = document.getElementById("fechasorteo");
+    fsorteo.addEventListener("keyup", () => {
+       var hola = fsorteo.value;
+       var reverso = hola.split("-");
+       var s = reverso.reverse();
+       var m = s.join("-");
+       var l = m.replace("-", "/");
+       var s = l.replace("-", "/");
+        var afsorteo = document.getElementById("sorteof").innerHTML = s;
+    });
+        var fsorteo = document.getElementById("fechasorteo");
+    fsorteo.addEventListener("change", () => {
+       var hola = fsorteo.value;
+       var reverso = hola.split("-");
+       var s = reverso.reverse();
+       var m = s.join("-");
+       var l = m.replace("-", "/");
+       var s = l.replace("-", "/");
+        var afsorteo = document.getElementById("sorteof").innerHTML = s;
+    });
+    var AGENCIA = document.getElementById("Agencia");
+    AGENCIA.addEventListener("keyup", () => {
+        var GEN = document.getElementById("GENE").innerHTML = AGENCIA.value;
+    });
+    var mosdalidad = document.getElementById("mosdalidad");
+    mosdalidad.addEventListener("keyup", () => {
+        var GENs = document.getElementById("hoj").innerHTML = mosdalidad.value;
+    });
+    var mosdalidada = document.getElementById("seccions");
+    mosdalidada.addEventListener("keyup", () => {
+        var GENa = document.getElementById("mosdalidm").innerHTML = mosdalidada.value + '” ';
+    });
+    var mosdalidada = document.getElementById("seccions");
+    mosdalidada.addEventListener("click", () => {
+        var GENa = document.getElementById("mosdalidm").innerHTML = mosdalidada.value + '” ';
+    });
+    var mosdalidadass = document.getElementById("mon");
+    mosdalidadass.addEventListener("keyup", () => {
+        const formatterEuros = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP' })
+        var r = mosdalidadass.value;
+        var r = r.replace(".", "");
+        var r = r.replace(",", ".");
+        var GENa = document.getElementById("numerosegundo").innerHTML = " por " + formatterEuros.format(r).replace(",00", "");;
+        if (mosdalidadass.value == "") {
+            var GENa = document.getElementById("numerosegundo").innerHTML = "";
+        }
+    });
+    var mosdalidadaass = document.getElementById("primerpre");
+    mosdalidadaass.addEventListener("keyup", () => {
+        var respla = mosdalidadaass.value;
+        var respla = respla.replace(".", "");
+        var respla = respla.replace(",", ".");
+        const formatterEuros = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP' }) 
+        if (mosdalidadaass.value == "") {
+            var GENaw = document.getElementById("numerosegundoss").innerHTML = "";
+        }
+        else {
+            var GENa = document.getElementById("numerosegundoss").innerHTML = " por " + formatterEuros.format(respla).replace(",00", "");
+        }
+    });
+
+
+</script>
+<p>
+
+</p>
+<p id="ajalar" style="position:absolute;top:209px;left:128px;white-space:nowrap" class="ft00"><b>&#160;</b></p>
+<p id="ajalar" style="position:absolute;top:209px;left:181px;white-space:nowrap" class="ft00"><b>&#160;</b></p>
+<p id="ajalar" style="position:absolute;top:209px;left:234px;white-space:nowrap" class="ft00"><b>&#160;</b></p>
+<p id="ajalar" style="position:absolute;top:209px;left:287px;white-space:nowrap" class="ft00"><b>&#160;</b></p>
+<p id="ajalar" style="position:absolute;top:209px;left:340px;white-space:nowrap" class="ft00"><b>&#160;</b></p>
+<p>
+<p id="ajalar" style="position:absolute;top:242px;left:128px;white-space:nowrap" text-overflow: clip; class="ft01"><table style="background: #FFFFFF"><td><p align="right"><b>Área Juegos&#160;por&#160;Convenio,&#160;<b id="o"></b>&#160;de <b id="h"></b>&#160;2.0<b id="aco"></b>.-&#160;</b></p><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p></b><b>SEÑOR ADMINISTRADOR:</b> <p align="right">Me dirijo a usted a efectos de elevar</p><p style="text-align: justify;">un cupón&#160;premiado del juego denominado&#160;<b>QUINI-6</b>&#160;en&#160;la&#160;modalidad <b>“<b id="tipop"></b><b id="sec"></b>” <b id="numerosegundoss"></b> <b id="hoj"></b><b id="mosdalidm"></b><b id="mosdalidadaaa"></b></b> <b id="numerosegundo"> </b> por un monto total del premio de pesos: <u><b id="message"></b></u> con <b><b id="cen"></b>/100</b>(<b id="pesos"></b>,<b id="pega"></b>)
+Correspondiente al Sorteo <b>Nº</b> <b id="Sorteoss"></b> Fecha <b id="sorteof"></b>, vendido 
+en la Agencia Oficial <b>Nº</b> <b id="GENE"></b>, presentado en tiempo y en forma.</p><p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A continuación se detalla los datos del beneficiario con el fin de proseguir el trámite 
+correspondiente.<p>&#160;</p><table border="2px" style="border-collapse: collapse;" ALIGN="center"><tr><td><b>APELLIDO Y NOMBRE:</b></td><td><b id="nombreape"><tr><td><b>D.N.I:</b></td><td><b id="sDOCUMENTO"></b></td></tr><tr><td><b>C.U.I.L:</b></td><td><b><b id="numenuno"></b>-<b id="puntos"></b>-<b id="segunda"></b></b></td></tr></b></td><tr><td><b>DOMICILIO:</b></td><td><b id="lugar"></b></td></tr><tr><td><b>LOCALIDAD:</b></td><td><b id="lugri"></b></td></tr><tr><td><b>PROVINCIA:</b></td><td><b id="locaprov">LA RIOJA</b></td></tr><tr><td><b>CUPON:</b><td><b id="cupones"></b></td></td></tr><tr><td><b>Nº DE APUESTA:</b></td><td><b id="puestap"></b></td></tr><tr><td><b>TELEFONO:</b></td><td><b id="cel"></b></td></tr><tr><td><b>PRESENTACION:</b></td><td><b id="persona">PRESENCIAL</b></td></tr></table><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Atentamente.-<p>&#160;</p><p>&#160;</p><p>&#160;</p><b>AL SEÑOR<br>ADMINISTRADOR DE AJALAR<br>Don RAMON NICOLAS VERA<br><u>PRESENTE:</u></b>
+
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}  .ft00{font-size:23px;font-family:ABCDEE+Calibri,Bold;color:#000000;}
+    .ft01{font-size:23px;font-family:ABCDEE+Calibri;color:#000000;}
+    .ft02{font-size:16px;font-family:ABCDEE+Calibri,Bold;color:#000000;}
+    .ft03{font-size:23px;line-height:33px;font-family:ABCDEE+Calibri;color:#000000;}
+    .ft04{font-size:23px;line-height:33px;font-family:ABCDEE+Calibri,Bold;color:#000000;}
+-->
+@media print {
+    body  and (min-width: 1024px){
+    display: block;
+
+}
+@media screen {
+    body {width:90%;margin: 0 auto;min-width:600px;max-width:2000px}
+
+}
+}
+
+</style>
+</head>
+<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

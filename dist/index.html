@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PROGRAMADOR MALDONADO Calculadora de CUIL</title>
+  <link rel="stylesheet" href="./style.css">
+<link rel="shortcut icon" href="./img/favicon.png">
+</head>
+<body id="loco">
+  <p id="primer">
+    <b>SISTEMA CREADO POR MARIANO M.</b>
+  </p>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <b id="primer">
+  <input type="radio"
+         name="condition"
+         v-model="condition"
+         id="femenino"
+         value="F"
+  />
+  <label for="femenino">
+    Femenino
+  </label>
+  </b>
+  <b id="primer">
+  <input type="radio"
+         name="condition"
+         v-model="condition"
+         id="masculino"
+         value="M"
+  />
+  <label for="masculino">
+    Masculino
+  </label>
+  </b>
+  <p id="primer">
+  <input type="radio"
+         name="condition"
+         v-model="condition"
+         id="empresa"
+         value="E"
+  />
+  <label for="empresa">
+    Empresa
+  </label>
+  </p>
+   
+  <b id="primer"> DNI<input type="text"
+         v-model="documento"
+         placeholder="Número de    documento"
+ id="ansesdocum" maxlength="8" />NOMBRE DE PERSONA: <input type="text" id="ansespersonas"/></b>
+  <div>
+</p>
+    <b id="primer">CUIL</b>  
+    <span class="result"> 
+      <b id="primer">{{ result }}
+    </b></span>
+
+  </div>
+</div>
+<p id="primer"><button onclick="javascript:print()">IMPRIMIR</button><button onclick="javascript:window.close()">CERRAR</button></p>
+<!-- partial -->
+</body>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page1-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="constanciadecuil-201.png" alt="background image"/>
+<p style="position:absolute;top:247px;left:338px;white-space:nowrap" class="ft00"><b>Constancia de CUIL/CUIT</b></p>
+<p style="position:absolute;top:278px;left:335px;white-space:nowrap" class="ft01"><t id="hactual"></t></p>
+<p style="position:absolute;top:294px;left:368px;white-space:nowrap" class="ft01">Fecha de alta: 18/04/2013</p>
+<p style="position:absolute;top:343px;left:293px;white-space:nowrap" class="ft01">Titular</p>
+<p style="position:absolute;top:360px;left:293px;white-space:nowrap" class="ft02"><b><b id="nombres"></b></b></p>
+<p style="position:absolute;top:390px;left:293px;white-space:nowrap" class="ft01">Documento</p>
+<p style="position:absolute;top:407px;left:293px;white-space:nowrap" class="ft02"><b>DU <b id="documentonumero"></b></b></p>
+<p style="position:absolute;top:436px;left:293px;white-space:nowrap" class="ft01">CUIL/CUIT</p>
+<p style="position:absolute;top:453px;left:293px;white-space:nowrap" class="ft02"><b id="cuilmh"></b></p>
+<p style="position:absolute;top:515px;left:293px;white-space:nowrap" class="ft03">Recordá que solo podés tener un único CUIL/CUIT.<br/>Esta constancia no tiene vencimiento y es<br/>GRATUITA.</p>
+<p style="position:absolute;top:569px;left:293px;white-space:nowrap" class="ft03">‟La presente no requiere autenticación con sello y<br/>firma de un agente de ANSES.” - Art. 1 - Res. DE<br/>76/2009.</p>
+</div>
+</body>
+<script type="text/javascript">
+  var hora = new Date();
+  var ji = new String(hora.getDate());
+  if (ji.length == 1) {
+    var ji = "0" + ji[0];
+  }
+  var mi = (hora.getMonth() + 1);
+  var mi = new String(mi);
+  if(mi.length == 1){
+    var mi = ("0" + mi);
+  }
+  var mis = (hora.getHours());
+  var mis = new String(mis);
+  if(mis.length == 1){
+    var mis = ("0" + mis);
+  }
+  var miss = (hora.getMinutes());
+  var miss = new String(miss);
+  if(miss.length == 1){
+    var miss = ("0" + miss);
+  }
+  var hora1 = ("Emitida el: " + ji + "/" + mi);
+  var hora3 = (hora1 + "/" + hora.getFullYear());
+  var hora4 = hora3 + " a las ";
+  var hora5 = hora4 + mis + ":" + miss + " hs";
+  document.getElementById("hactual").innerHTML = hora5;
+
+</script>
+<script src='./vue.min.js'></script><script  src="./script.js"></script>
+<script type="text/javascript">
+  var ansespersonas = document.getElementById("ansespersonas");
+  ansespersonas.addEventListener("keyup", () => {
+    var hola = ansespersonas.value;
+  var nombres = document.getElementById("nombres").innerHTML = hola.toUpperCase();
+  });
+</script>
+</html>
